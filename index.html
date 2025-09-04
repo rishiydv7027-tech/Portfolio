@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishi's Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      padding: 100px 20px;
+      background: linear-gradient(90deg, #00f260, #0575e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .typing {
+      font-size: 1.5rem;
+      color: #0ff;
+      border-right: 3px solid #0ff;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #0ff;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    footer {
+      padding: 20px;
+      background: #111;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header { font-size: 2rem; }
+      .typing { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Hi, I'm Rishi 👋
+    <div class="typing" id="typing"></div>
+  </header>
+
+  <section>
+    <div class="card">
+      <h2>About Me</h2>
+      <p>I'm a passionate developer learning AI, ML, and building cool projects 🚀</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Skills</h2>
+      <p>Python, C++, Machine Learning, Web Development</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Projects</h2>
+      <p>1. YouTube Growth Automation<br>
+         2. Discord Bots<br>
+         3. AI Experiments</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: yourmail@gmail.com<br>
+         GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Rishi | Built with ❤️
+  </footer>
+
+  <script>
+    const texts = ["Developer", "AI/ML Enthusiast", "YouTuber", "Tech Explorer"];
+    let count = 0, index = 0;
+    const typingElement = document.getElementById("typing");
+
+    function type() {
+      if (index < texts[count].length) {
+        typingElement.innerHTML += texts[count].charAt(index);
+        index++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 1500);
+      }
+    }
+
+    function erase() {
+      if (index > 0) {
+        typingElement.innerHTML = texts[count].substring(0, index - 1);
+        index--;
+        setTimeout(erase, 50);
+      } else {
+        count = (count + 1) % texts.length;
+        setTimeout(type, 500);
+      }
+    }
+
+    type();
+  </script>
+</body>
+</html>
