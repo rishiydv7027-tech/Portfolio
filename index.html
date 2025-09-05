@@ -5,21 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rishi's Portfolio</title>
   <style>
+    /* ---------- Global Styles ---------- */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f0f0f;
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a); /* subtle gradient background */
       color: #fff;
       text-align: center;
     }
+
+    a {
+      color: #0ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- Header ---------- */
     header {
-      padding: 100px 20px;
+      padding: 120px 20px;
       background: linear-gradient(90deg, #00f260, #0575e6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-size: 2.5rem;
       font-weight: bold;
     }
+
+    /* Typing animation */
     .typing {
       font-size: 1.5rem;
       color: #0ff;
@@ -27,72 +40,101 @@
       display: inline-block;
       white-space: nowrap;
       overflow: hidden;
+      margin-top: 10px;
     }
+
+    /* ---------- Section Styles ---------- */
     section {
       padding: 50px 20px;
     }
+
+    /* Card with transparency & glow */
     .card {
-      background: #1a1a1a;
-      padding: 20px;
-      margin: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px #0ff;
+      background: rgba(26, 26, 26, 0.8); /* transparent card */
+      padding: 25px;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
       max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+      transition: transform 0.3s ease;
     }
+    /* Hover effect for cards */
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    }
+
+    /* ---------- Footer ---------- */
     footer {
       padding: 20px;
       background: #111;
       font-size: 0.9rem;
     }
+
+    /* ---------- Responsive ---------- */
     @media (max-width: 600px) {
       header { font-size: 2rem; }
       .typing { font-size: 1.2rem; }
+      .card { padding: 15px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- ---------- Header ---------- -->
   <header>
     Hi, I'm Rishi 👋
     <div class="typing" id="typing"></div>
   </header>
 
+  <!-- ---------- About Me ---------- -->
   <section>
     <div class="card">
       <h2>About Me</h2>
-      <p>I'm a passionate developer learning AI, ML, and building cool projects 🚀</p>
+      <p>I'm a passionate developer exploring AI, ML, and building cool projects 🚀</p>
+      <!-- Future tip: Replace above text with your real bio -->
     </div>
   </section>
 
+  <!-- ---------- Skills ---------- -->
   <section>
     <div class="card">
       <h2>Skills</h2>
       <p>Python, C++, Machine Learning, Web Development</p>
+      <!-- Tip: Add more skills or logos in future -->
     </div>
   </section>
 
+  <!-- ---------- Projects ---------- -->
   <section>
     <div class="card">
       <h2>Projects</h2>
-      <p>1. YouTube Growth Automation<br>
-         2. Discord Bots<br>
-         3. AI Experiments</p>
+      <p>
+        1. YouTube Growth Automation<br>
+        2. Discord Bots<br>
+        3. AI Experiments
+      </p>
+      <!-- Tip: Replace these with real project links/images later -->
     </div>
   </section>
 
+  <!-- ---------- Contact ---------- -->
   <section>
     <div class="card">
       <h2>Contact</h2>
-      <p>Email: yourmail@gmail.com<br>
-         GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+      <p>Email: <a href="mailto:yourmail@gmail.com">yourmail@gmail.com</a><br>
+         GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+      </p>
+      <!-- Tip: Add LinkedIn or Twitter links here in future -->
     </div>
   </section>
 
+  <!-- ---------- Footer ---------- -->
   <footer>
     © 2025 Rishi | Built with ❤️
   </footer>
 
+  <!-- ---------- Typing Animation ---------- -->
   <script>
     const texts = ["Developer", "AI/ML Enthusiast", "YouTuber", "Tech Explorer"];
     let count = 0, index = 0;
@@ -121,5 +163,6 @@
 
     type();
   </script>
+
 </body>
 </html>
