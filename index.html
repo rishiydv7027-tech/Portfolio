@@ -9,8 +9,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* Background with gradient for transparency effect */
-      background: linear-gradient(135deg, #dfe9f3, #ffffff, #f0f0f0);
+      background: linear-gradient(135deg, #e0eafc, #f9f9f9); /* light apple-like bg */
       min-height: 100vh;
       color: #333;
       text-align: center;
@@ -43,37 +42,37 @@
 
     /* ---------- Glassmorphism White Card ---------- */
     .card {
-      background: rgba(255, 255, 255, 0.6); /* white transparency */
-      border-radius: 15px;
-      padding: 25px;
+      background: rgba(255, 255, 255, 0.4); /* more transparent */
+      border-radius: 20px;
+      padding: 30px;
       margin: 20px auto;
-      max-width: 600px;
+      max-width: 650px;
 
-      /* Glass blur effect */
-      backdrop-filter: blur(15px);
-      -webkit-backdrop-filter: blur(15px);
+      /* Apple-style Glass effect */
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
 
-      /* Border + shadow for depth */
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      /* Border + subtle shine */
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 
-      color: #333;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     /* Hover effect */
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 45px rgba(0, 0, 0, 0.2);
     }
 
     /* ---------- Footer ---------- */
     footer {
       padding: 20px;
-      background: rgba(255, 255, 255, 0.6);
+      background: rgba(255, 255, 255, 0.4);
       font-size: 0.9rem;
       margin-top: 40px;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(12px) saturate(150%);
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
     }
 
     /* ---------- Responsive ---------- */
