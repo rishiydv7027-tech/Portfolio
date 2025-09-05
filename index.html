@@ -41,30 +41,30 @@
     }
 
     /* ---------- Glassmorphism White Card ---------- */
-    .card {
-      background: rgba(255, 255, 255, 0.4); /* more transparent */
-      border-radius: 20px;
-      padding: 30px;
-      margin: 20px auto;
-      max-width: 650px;
+   .card {
+  background: rgba(255, 255, 255, 0.15); /* much more transparent */
+  border-radius: 25px;
+  padding: 30px;
+  margin: 25px auto;
+  max-width: 700px;
 
-      /* Apple-style Glass effect */
-      backdrop-filter: blur(20px) saturate(180%);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
+  /* Apple-style glass effect */
+  backdrop-filter: blur(25px) saturate(200%) brightness(1.1);
+  -webkit-backdrop-filter: blur(25px) saturate(200%) brightness(1.1);
 
-      /* Border + subtle shine */
-      border: 1px solid rgba(255, 255, 255, 0.5);
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  /* Subtle border & shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  color: #111;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    /* Hover effect */
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 45px rgba(0, 0, 0, 0.2);
-    }
-
+/* Hover effect */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.2);
+}
     /* ---------- Footer ---------- */
     footer {
       padding: 20px;
