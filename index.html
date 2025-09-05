@@ -9,7 +9,9 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ffffff, #f2f2f2); /* Light background */
+      /* Background with gradient for transparency effect */
+      background: linear-gradient(135deg, #dfe9f3, #ffffff, #f0f0f0);
+      min-height: 100vh;
       color: #333;
       text-align: center;
     }
@@ -41,18 +43,18 @@
 
     /* ---------- Glassmorphism White Card ---------- */
     .card {
-      background: rgba(255, 255, 255, 0.7); /* white transparent */
+      background: rgba(255, 255, 255, 0.6); /* white transparency */
       border-radius: 15px;
       padding: 25px;
       margin: 20px auto;
       max-width: 600px;
 
-      /* Glass effect */
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      /* Glass blur effect */
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
 
       /* Border + shadow for depth */
-      border: 1px solid rgba(255, 255, 255, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.4);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 
       color: #333;
